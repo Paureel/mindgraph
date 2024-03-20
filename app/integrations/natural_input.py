@@ -114,21 +114,21 @@ def create_knowledge_graph(app, natural_input):
                 {
                     "role": "system",
                     "content": f"""
-                You are an AI expert specializing in knowledge graph creation with the goal of capturing relationships based on a given input or request.
-                You are given input in various forms such as paragraph, email, text files, and more.
+                You are an AI expert specializing in knowledge graph creation and molecular biology with the goal of capturing relationships based on a given input or request.
+                You are given input in various forms such as paragraph, email, text files, scientific hypotheses, and more.
                 Your task is to create a knowledge graph based on the input.
-                Only use organizations, people, and events as nodes and do not include concepts or products.
+                Only use compounds, biological pathways, genes and scientific hypotheses as nodes and do not include concepts or products.
                 Only add nodes that have a relationship with at least one other node.
-                Make sure that the node type (people, org, event) matches the to_type or for_type when the entity is part of a relationship.
+                Make sure that the node type (compound, pathway, genes, hypothesis) matches the to_type or for_type when the entity is part of a relationship.
               """,
                 },
                 {
                     "role": "user",
-                    "content": f"Help me understand the following by creating a structured knowledge graph: Person A works at Org B. Person C works at Org B. Org D invested in Org B. Person E works at Org D.",
+                    "content": f"Help me understand the following by creating a structured knowledge graph: Gene A belongs to Pathway B. Gene C belongs to Pathway B. Pathway D interacts with Pathway B. Gene E belongs to Pathway D.",
                 },
                 {
                     "role": "assistant",
-                    "content": '{"nodes":{"Person":[{"temp_id":1,"name":"Person A"},{"temp_id":2,"name":"Person C"},{"temp_id":3,"name":"Person E"}],"Organization":[{"temp_id":4,"name":"Org B"},{"temp_id":5,"name":"Org D"}]},"relationships":[{"from_type":"Person","from_temp_id":1,"to_type":"Organization","to_temp_id":4,"data":{"relationship":"Works at"}},{"from_type":"Person","from_temp_id":2,"to_type":"Organization","to_temp_id":4,"data":{"relationship":"Works at"}},{"from_type":"Organization","from_temp_id":5,"to_type":"Organization","to_temp_id":4,"data":{"relationship":"Invested in"}},{"from_type":"Person","from_temp_id":3,"to_type":"Organization","to_temp_id":5,"data":{"relationship":"Works at"}}]}',
+                    "content": '{"nodes":{"Gene":[{"temp_id":1,"name":"Gene A"},{"temp_id":2,"name":"Gene C"},{"temp_id":3,"name":"Gene E"}],"Pathway":[{"temp_id":4,"name":"Pathway B"},{"temp_id":5,"name":"Pathway D"}]},"relationships":[{"from_type":"Gene","from_temp_id":1,"to_type":"Pathway","to_temp_id":4,"data":{"relationship":"Belongs to"}},{"from_type":"Gene","from_temp_id":2,"to_type":"Pathway","to_temp_id":4,"data":{"relationship":"Belongs to"}},{"from_type":"Pathway","from_temp_id":5,"to_type":"Pathway","to_temp_id":4,"data":{"relationship":"Interacts with"}},{"from_type":"Gene","from_temp_id":3,"to_type":"Pathway","to_temp_id":5,"data":{"relationship":"Belongs to"}}]}',
                 },
                 {
                     "role": "user",
