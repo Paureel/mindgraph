@@ -57,16 +57,6 @@
       "Challenges": "Known challenges or criticisms."
     }
   },
-  "Hypothesis": {
-    "node_type": "Hypothesis",
-    "edge_types": {
-      "name": "Name of the Hypothesis.",
-      "description": "Description of the Hypothesis.",
-      "Occurs in": "Location and date of the Hypothesis.",
-      "Involves/Includes": "Genes or pathways or compounds involved in the Hypothesis.",
-      "Related to": "Concepts, actions, or technologies related to the Hypothesis."
-    }
-  },
   "Technology": {
     "node_type": "Technology",
     "edge_types": {
