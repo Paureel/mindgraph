@@ -1,5 +1,5 @@
 {
-  "Person": {
+  "Gene": {
     "node_type": "Gene",
     "edge_types": {
       "name": "The name of the gene (HUGO symbol).",
@@ -11,28 +11,28 @@
       "Located in/Found in": "Localization in the cell."
     }
   },
-  "Organization": {
-    "node_type": "Organization",
+  "Pathway": {
+    "node_type": "Pathway",
     "edge_types": {
-      "name": "Name of the organization.",
-      "description": "Description of the organization.",
-      "Founded in": "Year and location the organization was founded.",
-      "Operates in": "Regions where the organization has operations.",
-      "Produces/Offers": "Products, services, or technologies the organization provides.",
-      "Invests in": "Technologies, markets, or other organizations it has invested in.",
-      "Collaborates on": "Partnerships or collaborations with other organizations or individuals.",
-      "Competes with": "Other organizations it competes with."
+      "name": "Name of the Pathway.",
+      "description": "Description of the Pathway.",
+      
+      "Operates in": "Main function of the pathway.",
+      
+      
+      "Collaborates on": "Crosstalks with other pathways.",
+      "Competes with": "Syntheticaly lethal with other genes or pathway."
     }
   },
-  "Object": {
-    "node_type": "Object",
+  "Compound": {
+    "node_type": "Compound",
     "edge_types": {
-      "name": "Name of the object.",
-      "description": "Description of the object.",
+      "name": "Name of the compound.",
+      "description": "Description of the compound.",
       "Part of/Contains": "Components or contents of the object, if applicable.",
       "Produced/Offers": "If the object is a product, which organization offers it.",
-      "Used by/Utilized by": "Who uses the object, if it's a tool or technology.",
-      "Color": "Color of the object."
+      "Used by/Utilized by": "Who uses the object, if it's a tool or technology."
+     
     }
   },
   "Concept": {
@@ -45,14 +45,14 @@
       "Contrasts with": "Concepts or technologies it is in opposition to."
     }
   },
-  "Event": {
-    "node_type": "Event",
+  "Hypothesis": {
+    "node_type": "Hypothesis",
     "edge_types": {
-      "name": "Name of the event.",
-      "description": "Description of the event.",
-      "Occurs in": "Location and date of the event.",
-      "Involves/Includes": "People or organizations involved in the event.",
-      "Related to": "Concepts, actions, or technologies related to the event."
+      "name": "Name of the Hypothesis.",
+      "description": "Description of the Hypothesis.",
+      "Occurs in": "Location and date of the Hypothesis.",
+      "Involves/Includes": "Genes or pathways or compounds involved in the Hypothesis.",
+      "Related to": "Concepts, actions, or technologies related to the Hypothesis."
     }
   },
   "Technology": {
