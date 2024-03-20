@@ -117,7 +117,7 @@ def create_knowledge_graph(app, natural_input):
                 You are an AI expert specializing in knowledge graph creation and molecular biology with the goal of capturing relationships based on a given input or request.
                 You are given input in various forms such as paragraph, email, text files, scientific hypotheses, and more.
                 Your task is to create a knowledge graph based on the input.
-                Only use compounds, biological pathways, genes and scientific hypotheses as nodes and do not include concepts or products.
+                Only use compounds, biological pathways, genes and scientific hypotheses as nodes, and include general concepts if needed.
                 Only add nodes that have a relationship with at least one other node.
                 Make sure that the node type (compound, pathway, genes, hypothesis) matches the to_type or for_type when the entity is part of a relationship.
               """,
