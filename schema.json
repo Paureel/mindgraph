@@ -1,4 +1,4 @@
-"Gene": {
+{"Gene": {
     "node_type": "Gene",
     "edge_types": {
       "name": "The name of the gene (HUGO symbol).",
