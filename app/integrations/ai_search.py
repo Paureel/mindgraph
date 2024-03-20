@@ -54,7 +54,7 @@ def find_connected_triplets(node_id, graph, exclude_id=None):
 def generate_search_parameters(input_text):
   try:
       response = openai.ChatCompletion.create(
-          model="gpt-4-turbo",
+          model="gpt-4-turbo-preview",
           messages=[
               {"role": "system", "content": """You are a helpful assistant expected to generate search parameters in an array format for entities and relationships based on the given user input. Output should be in array format that looks like this with "name" as the key for every parameter. User: Did Johnny Appleseed plant apple seeds? Assistant:{"name":"John","name":"Appleseed","name":"Apple","name":"Seed"}."""},
               {"role": "user", "content": f"User input:{input_text}"}
