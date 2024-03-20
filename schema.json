@@ -1,14 +1,14 @@
 {
   "Person": {
-    "node_type": "Person",
+    "node_type": "Gene",
     "edge_types": {
-      "name": "The name of the individual.",
-      "description": "Description of the person.",
-      "Born in/Died in": "Years of birth and death, if applicable.",
-      "Works for": "Organizations the person is or was affiliated with.",
-      "Invented/Discovered": "List of technologies or concepts the person has invented or discovered.",
-      "Expert in": "Areas of expertise.",
-      "Located in/Found in": "Current geographical location."
+      "name": "The name of the gene (HUGO symbol).",
+      "description": "Description of the gene.",
+      
+      "Belongs to": "Pathways the gene is curated in or associated with.",
+      
+      "Expert in": "Known function of the gene.",
+      "Located in/Found in": "Localization in the cell."
     }
   },
   "Organization": {
