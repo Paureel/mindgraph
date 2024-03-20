@@ -1,14 +1,16 @@
-{
-  "Gene": {
+"Gene": {
     "node_type": "Gene",
     "edge_types": {
       "name": "The name of the gene (HUGO symbol).",
       "description": "Description of the gene.",
-      
       "Belongs to": "Pathways the gene is curated in or associated with.",
-      
       "Expert in": "Known function of the gene.",
-      "Located in/Found in": "Localization in the cell."
+      "Located in/Found in": "Localization in the cell.",
+      "Interacts with": "Interactions with other genes.",
+      "Regulated by": "Regulation by compounds or other genes.",
+      "Mutations": "Known mutations in the gene and their impacts.",
+      "Expressed in": "Tissues or cell types where the gene is expressed.",
+      "Implicated in": "Diseases or conditions the gene is associated with."
     }
   },
   "Pathway": {
@@ -16,12 +18,14 @@
     "edge_types": {
       "name": "Name of the Pathway.",
       "description": "Description of the Pathway.",
-      
       "Operates in": "Main function of the pathway.",
-      
-      
       "Collaborates on": "Crosstalks with other pathways.",
-      "Competes with": "Syntheticaly lethal with other genes or pathway."
+      "Competes with": "Synthetically lethal with other genes or pathway.",
+      "Involves": "Genes involved in the Pathway.",
+      "Modulated by": "Compounds or factors that affect the Pathway.",
+      "Regulates": "Genes or processes regulated by the pathway.",
+      "Implicated in": "Diseases or conditions the pathway is associated with.",
+      "Response to": "Environmental or cellular conditions affecting the pathway."
     }
   },
   "Compound": {
@@ -31,8 +35,13 @@
       "description": "Description of the compound.",
       "Part of/Contains": "Components or contents of the object, if applicable.",
       "Produced/Offers": "If the object is a product, which organization offers it.",
-      "Used by/Utilized by": "Who uses the object, if it's a tool or technology."
-     
+      "Used by/Utilized by": "Who uses the object, if it's a tool or technology.",
+      "Modulates": "Effects on genes or pathways.",
+      "Inhibitor of": "Specific genes or pathways it inhibits.",
+      "Activator of": "Specific genes or pathways it activates.",
+      "Metabolism": "How the compound is metabolized within the organism.",
+      "Side effects": "Known side effects or adverse reactions.",
+      "Therapeutic use": "Conditions or diseases the compound is used to treat."
     }
   },
   "Concept": {
@@ -42,7 +51,10 @@
       "description": "Description of the concept.",
       "Is a/Type of": "Broader category the concept falls under.",
       "Related to": "Concepts or technologies related to this one.",
-      "Contrasts with": "Concepts or technologies it is in opposition to."
+      "Contrasts with": "Concepts or technologies it is in opposition to.",
+      "Application": "Practical applications or implications of the concept.",
+      "Theoretical basis": "Underlying theories or principles.",
+      "Challenges": "Known challenges or criticisms."
     }
   },
   "Hypothesis": {
