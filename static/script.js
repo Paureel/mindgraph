@@ -222,7 +222,7 @@ $(document).ready(function () {
   function updateGraphVisualization(data) {
     console.log("Updating graph visualization");
     console.log("Received data:", data); // Debug: Log received data
-    #if (JSON.stringify(data) !== JSON.stringify(lastFetchedData)) {
+    // if (JSON.stringify(data) !== JSON.stringify(lastFetchedData)) {
     if (1 == 1) {
       console.log("Data has changed, updating graph visualization");
     // Clear the current graph
