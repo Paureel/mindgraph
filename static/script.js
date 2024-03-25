@@ -217,34 +217,30 @@ $(document).ready(function () {
   }
 
   
-  let lastFetchedData = null;
+  
 
   function updateGraphVisualization(data) {
     console.log("Updating graph visualization");
     console.log("Received data:", data); // Debug: Log received data
-    // if (JSON.stringify(data) !== JSON.stringify(lastFetchedData)) {
-    if (1 == 1) {
-      console.log("Data has changed, updating graph visualization");
+    
     // Clear the current graph
-      cy.elements().remove();
+    cy.elements().remove();
 
     // Transform and add the new nodes and edges to the graph
-      const cytoscapeData = transformDataToCytoscapeFormat(data);
-      console.log("Cytoscape data (nodes and edges):", cytoscapeData); // Debug: Log transformed data
+    const cytoscapeData = transformDataToCytoscapeFormat(data);
+    console.log("Cytoscape data (nodes and edges):", cytoscapeData); // Debug: Log transformed data
 
-      cy.add([...cytoscapeData.nodes, ...cytoscapeData.edges]);
+    cy.add([...cytoscapeData.nodes, ...cytoscapeData.edges]);
 
     // Relayout the graph
-      cy.layout({
+    cy.layout({
       name: "cose",
     }).run();
 
     // Fit the graph to the viewport
-      cy.fit();
-      lastFetchedData = data;
-  } else {
-            console.log("Data unchanged, no need to update graph visualization");
-        }
+    cy.fit();
+   
+  
 
     // Define a function to check for updates and refresh the graph
   function checkForUpdates() {
