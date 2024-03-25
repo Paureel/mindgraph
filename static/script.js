@@ -257,7 +257,7 @@ $(document).ready(function () {
   }
   
   // Set up polling to automatically check for updates every 5 seconds
-  setInterval(checkForUpdates, 5000);
+  
 
   function fetchAndUpdateGraph() {
     fetch("/get-graph-data")
@@ -271,6 +271,7 @@ $(document).ready(function () {
         console.error("Error fetching graph data:", error);
       });
   }
+  setInterval(checkForUpdates, 5000);
   // Call fetchAndUpdateGraph every 5 seconds
   // setInterval(fetchAndUpdateGraph, 10000);
 
