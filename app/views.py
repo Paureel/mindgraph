@@ -35,7 +35,8 @@ from .models import (
 )
 from .signals import entity_created, entity_updated, entity_deleted
 from .integration_manager import get_integration_function
-import .integrations.natural_input
+from .integrations.natural_input import natural_input
+
 main = Blueprint("main", __name__)
 
 
