@@ -216,13 +216,10 @@ $(document).ready(function () {
     return { nodes, edges };
   }
 
-  
-  
-
   function updateGraphVisualization(data) {
     console.log("Updating graph visualization");
     console.log("Received data:", data); // Debug: Log received data
-    
+
     // Clear the current graph
     cy.elements().remove();
 
@@ -239,8 +236,7 @@ $(document).ready(function () {
 
     // Fit the graph to the viewport
     cy.fit();
-   
-  
+  }
 
     // Define a function to check for updates and refresh the graph
   function checkForUpdates() {
@@ -254,7 +250,7 @@ $(document).ready(function () {
   }
   
   // Set up polling to automatically check for updates every 5 seconds
-  
+  setInterval(checkForUpdates, 5000);
 
   function fetchAndUpdateGraph() {
     fetch("/get-graph-data")
@@ -268,7 +264,6 @@ $(document).ready(function () {
         console.error("Error fetching graph data:", error);
       });
   }
-  setInterval(checkForUpdates, 5000);
   // Call fetchAndUpdateGraph every 5 seconds
   // setInterval(fetchAndUpdateGraph, 10000);
 
