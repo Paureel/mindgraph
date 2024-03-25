@@ -241,7 +241,9 @@ $(document).ready(function () {
     // Fit the graph to the viewport
       cy.fit();
       lastFetchedData = data;
-  }
+  } else {
+            console.log("Data unchanged, no need to update graph visualization");
+        }
 
     // Define a function to check for updates and refresh the graph
   function checkForUpdates() {
