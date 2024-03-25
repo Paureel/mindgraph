@@ -238,6 +238,20 @@ $(document).ready(function () {
     cy.fit();
   }
 
+    // Define a function to check for updates and refresh the graph
+  function checkForUpdates() {
+      fetch("/get-graph-data")
+          .then((response) => response.json())
+          .then((data) => {
+              console.log("Checking for updates:", data);
+              updateGraphVisualization(data); // Update the graph with the new data
+          })
+          .catch((error) => console.error("Error checking for updates:", error));
+  }
+  
+  // Set up polling to automatically check for updates every 5 seconds
+  setInterval(checkForUpdates, 5000);
+
   function fetchAndUpdateGraph() {
     fetch("/get-graph-data")
       .then((response) => response.json())
