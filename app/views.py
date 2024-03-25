@@ -172,3 +172,25 @@ def search_relationship():
 
 
 # Add more routes as needed for specific actions, queries, etc.
+@main.route("/process-natural-input", methods=["POST"])
+def process_natural_input():
+    # Ensure the request is JSON
+    if not request.is_json:
+        return jsonify({"error": "Request must be JSON"}), 400
+    
+    # Extract the natural language input from the request JSON
+    data = request.get_json().get("data")
+    
+    if not data:
+        return jsonify({"error": "No data provided"}), 400
+    
+    try:
+        # Process the natural language input through the `natural_input` function
+        # Assuming `natural_input` is defined to take the application context and the input data
+        response_data = natural_input(current_app._get_current_object(), data)
+        
+        # Return the response from the processing function
+        return jsonify(response_data), 200
+    except Exception as e:
+        # Handle any errors that occur during processing
+        return jsonify({"error": str(e)}), 500
